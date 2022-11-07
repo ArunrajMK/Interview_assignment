@@ -41,15 +41,45 @@ const add=(newArr,el)=>{
 //     return a+b},0)
 
     const handleminus=(el)=>{
-        if(el.count===1){
-            addedArr.pop()
-        }
-        el.quant--
-        setTotal(total-1)
-        setGt(gt-el.price)
-        addedArr.pop()
-        setAddedArr([...addedArr,el])
+        // if(el.count===1){
+        //     addedArr.pop()
+        // }
+        // el.quant--
+        // setTotal(total-1)
+        // setGt(gt-el.price)
+        // addedArr.pop()
+        // setAddedArr([...addedArr,el])
+    let newArr=[...addedArr]
+    // setTotal(total)
+    // setGt(gt+el.price)
+
+    let arr1=minus(newArr,el)
+    setAddedArr(arr1)
     }
+
+
+    const minus=(newArr,el)=>{
+        let f=true
+        console.log(newArr);
+        
+        newArr?.forEach((e)=>{
+            if(e.id===el.id){
+             e.Q-=1
+             f=false
+             
+            }
+         })
+         if(f){
+            newArr.push({...el,Q:1})
+         }
+        
+         return newArr
+    }
+
+
+
+
+
   return (
     <>
     {data?.map((el,index)=>{
