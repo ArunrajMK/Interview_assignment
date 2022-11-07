@@ -1,31 +1,23 @@
 import React, { useEffect, useState } from 'react'
 import "./all.css"
-function Cart({total,price,name,gtotal2}) {
+function Cart({gt,addedArr,total}) {
 
-  let gtotal = 0 
-  gtotal += total*Number(price)
-
+console.log(addedArr);
   
-//  let arr = [];
-//  arr.push(gtotal)
-
-
-// const [arrr, setarrr] = useState([])
-// useEffect(()=>{
-//   setarrr([...arrr,gtotal])
-// },[])
+ 
 
 
   return (
-    <div>
+    <div id="cart">
       
-        <div id="container">
-        <h4>Cart</h4>
-        <div>Product Name: {name}</div>
-        <div>Product Count:{total}</div>
-         <div>Total:{gtotal}</div>
+        {/* <div id="container">
        
-        </div>
+        <div>Product Name: {name}</div> */}
+        <div> <h4>Cart</h4></div>
+         {/* <div>Total:{gtotal}</div>
+       
+        </div> */}
+        <h3>Price: {gt}</h3>
     </div>
   )
 }

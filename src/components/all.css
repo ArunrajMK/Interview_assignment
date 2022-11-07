@@ -1,11 +1,11 @@
 #container{
-    border:2px solid
+    border:2px solid red
 }
 
 #box{
-    border:2px solid;
-    width: 600px;
-    
+   
+    width: 1000px;
+   
 }
 
 
@@ -14,7 +14,17 @@
     grid-template-columns: repeat(5,1fr);
 }
 
-#outBox{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+
+
+
+#cart{
+  border: 1px solid; 
+  margin-left: 900px; 
+  width: 300px;
+  margin-top: -160px;
+}
+
+button{
+    width:100px;
+    height: 60px;
 }
